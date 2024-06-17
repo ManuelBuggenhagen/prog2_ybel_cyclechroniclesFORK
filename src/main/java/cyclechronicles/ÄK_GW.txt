@@ -1,0 +1,15 @@
+1)
+Eingabe:       |           gültige ÄK                |       ungültige ÄK
+bike type      |     gÄK1 = !Gravelbike && !EBike    |     üÄK2 = Gravelbike
+                                                     |     üÄK3 = EBike
+
+customer order |     gÄK1 = keine Bestellung         |     üÄK2 = eine Bestellung
+
+open orders    |     gÄK1 = 0-5 Bestellungen         |     üÄK2 = 5 oder mehr Bestellungen
+
+Grenzwertanalyse:   bike type      -> kein Grenzwert vorhanden
+                    customer order -> eine Bestellung
+                    open orders    -> 4 Bestellungen und 0 Bestellungen
+
+2)
+Testnummer   |   1         2            3     |     4     |     5     |     6     |     7    |     8      |      9
