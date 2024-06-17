@@ -1,0 +1,21 @@
+1)
+Eingabe:       |           gültige ÄK                |       ungültige ÄK
+bike type      |     gÄK1 = !Gravelbike && !EBike    |     uÄK1 = Gravelbike
+                                                     |     uÄK2 = EBike
+
+customer order |     gÄK2 = keine Bestellung         |     uÄK3 = eine Bestellung
+
+open orders    |     gÄK3 = 0-5 Bestellungen         |     uÄK4 = 5 oder mehr Bestellungen
+
+Grenzwertanalyse:   bike type      -> kein Grenzwert vorhanden
+                    customer order -> eine Bestellung üÄK3
+                    open orders    -> 4 Bestellungen gÄK3u   und 0 Bestellungen gÄK3u2
+
+2)
+Testnummer          |   1     |     2     |     3    |    4    |     5     |   6    |   7    |     8      |   9    |
+--------------------------------------------------------------------------------------------------------------------
+geprüfte ÄK / GW    |  gÄK1   |  gÄK2     |   gÄK3   |  uÄK1   |  uÄK2     | uÄK3   | uÄK4   |  gÄK3u     | gÄK3u2 |
+bike type           |road bike| road bike |   MTB    | EBike   |Gravelbike |  MTB   | MTB    | road bike  |  MTB   |
+customer order      |   0     |    0      |    0     |    0    |    0      |  1     |  0     |   0        |  0     |
+open orders         |   3     |    2      |   1      |    3    |    2      |   3    |  5     |   4        |  0     |
+erwartetes Ergebnis |  OK     |    OK     |   OK     | Error   |   Error   | Error  | Error  |   OK       |  OK    |
